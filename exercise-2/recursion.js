@@ -1,4 +1,5 @@
 const isEven = function (num) {
+  num = Math.abs(num);
   if (num === 0) {
     return true;
   } else if (num === 1) {
@@ -7,4 +8,4 @@ const isEven = function (num) {
     return isEven(num - 2);
   }
 };
-console.log(isEven(1021));
+console.log(isEven(-50));
