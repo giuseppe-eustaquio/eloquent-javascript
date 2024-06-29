@@ -13,7 +13,7 @@ for (let i = 1; i <= 100; i++) {
   }
 
   if (!(isDivisibleBy3(i) || isDivisibleBy5(i))) {
-    process.stdout.write(String(i));
+    process.stdout.write(i.toString());
   }
   console.log();
 }
