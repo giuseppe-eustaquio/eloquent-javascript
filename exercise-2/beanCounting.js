@@ -1,36 +1,36 @@
-const countBs = function (str) {
-  let bs = 0;
+const countB = (str) => {
+  let b = 0;
   for (let i = 0; i <= str.length; i++) {
     if (str[i] === "B") {
-      bs += 1;
+      b++;
     }
   }
-  return bs;
+  return b;
 };
-console.log(countBs("aBcBBBdeBghiBj"));
+console.log(countB("aBcBBBdeBghiBj"));
 
 const countChar = function (str, letter) {
-  let bs = 0;
+  let b = 0;
   for (let i = 0; i <= str.length; i++) {
     if (str[i] === letter) {
-      bs += 1;
+      b++;
     }
   }
-  return bs;
+  return b;
 };
 console.log(countChar("aBcBBBdeBghiBdddj", "d"));
 
 // currying style
-const countCharCurry = function (str) {
-  let bs = 0;
+const countCharCurry = (str) => {
+  let b = 0;
   return function (letter) {
     for (let i = 0; i <= str.length; i++) {
       if (str[i] === letter) {
-        bs += 1;
+        b += 1;
       }
     }
 
-    return bs;
+    return b;
   };
 };
 console.log(countCharCurry("aBcBBBdeBghaaaaaiBdddj")("a"));
