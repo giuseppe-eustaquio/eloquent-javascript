@@ -1,10 +1,7 @@
-const loop = function (value, testf, bodyf, updatef) {
-  // console.log(value);
-  // console.log(testf(value));
-  // console.log(updatef(value));
-  while (testf(value)) {
-    bodyf(value);
-    value = updatef(value);
+const loop = function (value, test, body, update) {
+  while (test(value)) {
+    body(value);
+    value = update(value);
   }
 };
 
